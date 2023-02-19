@@ -9,6 +9,7 @@ import userRoute from './routes/userRoutes.js'
 import authRoute from './routes/authRoutes.js'
 import reviewRoute from './routes/reviewRoutes.js'
 import bookingRoute from './routes/bookingRoutes.js'
+import vehicleRoute from './routes/vehicleRoutes.js'
 
 dotenv.config()
 const app = express()
@@ -48,6 +49,7 @@ app.use('/users', userRoute)
 app.use('/auth', authRoute)
 app.use('/review', reviewRoute)
 app.use('/booking', bookingRoute)
+app.use('/vehicles', vehicleRoute)
 
 app.listen(port, () =>{
     connect()

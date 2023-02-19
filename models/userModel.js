@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
 
-    photo: {
+    imageUrl: {
       type: String,
     },
 
@@ -25,6 +25,11 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "user",
     },
+
+    // vehicleId:{
+    //     type: mongoose.Types.ObjectId,
+    //     ref: "Vehicle",
+    // }
   },
   { timestamps: true }
 );

@@ -14,7 +14,7 @@ router.put("/:id", verifyAdmin, updateTour);
 router.delete("/:id",verifyAdmin, deleteTour);
 
 // get single tour
-router.get("/search/getTourBySearch/:id", getSingleTour);
+router.get("/:id", getSingleTour);
 
 // get all tour
 router.get("/", getAllTour);

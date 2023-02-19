@@ -41,3 +41,13 @@ export const verifyAdmin =(req, res, next) =>{
         }
     })
 }
+
+export const verifyDriver = (req, res, next) => {
+    verifyToken(req,res,next,()=>{
+        if(req.user.id == req.params.id || req.user.role=='driver'){
+            next()
+        }else{
+            return res.status(401).json({success: false, message: "You're not authenticated"})
+        }
+    })
+  };
