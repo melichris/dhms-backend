@@ -26,10 +26,10 @@ const userSchema = new mongoose.Schema(
       default: "user",
     },
 
-    // vehicleId:{
-    //     type: mongoose.Types.ObjectId,
-    //     ref: "Vehicle",
-    // }
+    vehicleId:{
+        type: mongoose.Types.ObjectId,
+        ref: "Vehicle",
+    }
   },
   { timestamps: true }
 );

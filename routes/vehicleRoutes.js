@@ -5,16 +5,16 @@ import { createVehicle, deleteVehicle, getAllVehicle, getSingleVehicle, updateVe
 const router = express.Router();
 
 // create new vehicle
-router.post("/", createVehicle);
+router.post("/", verifyDriver, createVehicle);
 
 // updater vehicle
-router.put("/:id", updateVehicle);
+router.put("/:id", verifyDriver, updateVehicle);
 
 // delete vehicle
-router.delete("/:id",deleteVehicle);
+router.delete("/:id",verifyDriver, deleteVehicle);
 
 // get single vehicle
-router.get("/:id", getSingleVehicle);
+router.get("/:id", verifyDriver, getSingleVehicle);
 
 // get all vehicle
 router.get("/", getAllVehicle);

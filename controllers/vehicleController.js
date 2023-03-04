@@ -1,10 +1,15 @@
 import Vehicle from "../Models/vehicleModel.js";
 
 export const createVehicle = async (req, res) => {
-    const newTour = Vehicle(req.body);
+  let data ={
+    ...req.body,
+    driverId: req.body.userId,
+  }
+  console.log(req.body.userId)
+  const newVehicle = Vehicle(data);
   
     try {
-      const savedTour = await newTour.save();
+      const savedTour = await newVehicle.save();
   
       res.status(200).json({
         success: true,

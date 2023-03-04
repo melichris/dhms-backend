@@ -48,7 +48,7 @@ app.use('/tours', tourRoute)
 app.use('/users', userRoute)
 app.use('/auth', authRoute)
 app.use('/review', reviewRoute)
-app.use('/booking', bookingRoute)
+app.use('/bookings', bookingRoute)
 app.use('/vehicles', vehicleRoute)
 
 app.listen(port, () =>{

@@ -4,8 +4,8 @@ import { verifyAdmin, verifyUser } from "../middleware/verifyToken.js"
 
 const router = express.Router()
 
-router.post('/', verifyUser, createBooking)
-router.get('/', verifyUser, getAllBooking)
-router.get('/:id', verifyAdmin, getBooking)
+router.post('/', createBooking)
+router.get('/', getAllBooking)
+router.get('/:id', getBooking)
 
 export default router

@@ -32,9 +32,13 @@ const bookingSchema = new mongoose.Schema(
     },
 
     bookAt: {
-        type: Date,
-        required: true
+        type: String,
+    },
+
+    status: {
+      type: String
     }
+
   },
   { timestamps: true }
 );
